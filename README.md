@@ -57,6 +57,7 @@ As part of the **STP26 Seed Talent Program**, I worked with a team on Dyaco Inte
 
 | Project | Focus | What it demonstrates | Tech |
 | --- | --- | --- | --- |
+| [ESP32-S3 Sensor Data Acquisition for CPR Research](https://github.com/Darren-HUNGITAI/ESP32-S3-Sensor-Data-Acquisition-for-CPR-Research) | Embedded sensor acquisition | A401 / MCP6002 analog pressure sensing with a 100 Hz sampling target, USB serial or Wi-Fi UDP output, and Python CSV experiment capture; synchronized sensor fusion and TinyML are planned | ESP32-S3, Embedded C++, PlatformIO, Analog Sensing, Python |
 | **Dyaco AI 跑姿矯正 APP** | STP26 enterprise AI project | Team-built running-form analysis app with 10–30 second video selection, seven pose metrics, educational AI feedback, bilingual sports assistance, cloud history, and trend views; Best Project Award — First Place (Team) | Flutter, FastAPI, MediaPipe, OpenCV, AWS RDS MySQL |
 | [LINE-MedBoardCoach](https://github.com/Darren-HUNGITAI/LINE-MedBoardCoach) | AI study assistant | Flask LINE Webhook integrated with CGU LLM, AI Q&A, conversation memory, medical board exam quiz flow, SQLite answer history, scoring, and weakness analysis | Python, Flask, LINE Messaging API, SQLite, LLM API |
 | [VideoMaestro](https://github.com/Darren-HUNGITAI/CloudSystem_VideoMaestro) | Fault-tolerant video transcoding cluster | Manager-worker task distribution, chunked upload, GPU-accelerated FFmpeg encoding, node monitoring, worker failure detection, and manager failover mode | Python, Flask, Docker Compose, FFmpeg, NVENC, Cloudflare Tunnel |
@@ -74,6 +75,8 @@ As part of the **STP26 Seed Talent Program**, I worked with a team on Dyaco Inte
 - The system provides running-form analysis and educational feedback; it is not a medical diagnostic or injury-prediction tool.
 
 ### Embedded Edge AI Direction
+- Built an [ESP32-S3 CPR research acquisition prototype](https://github.com/Darren-HUNGITAI/ESP32-S3-Sensor-Data-Acquisition-for-CPR-Research) with A401 / MCP6002 pressure sensing, USB serial / Wi-Fi UDP transports, and Python CSV capture. The 100 Hz rate is a sampling target, not a measured guarantee.
+- An earlier ICM-20948 telemetry pipeline uses MQTT, Docker, SQLite, FastAPI, and WebSocket charts; synchronized pressure / IMU fusion and TinyML inference remain future work.
 - Researching MCU-based multi-pressure-sensor fusion for real-time chest-compression quality assessment.
 - Interested in TinyML deployment, sensor firmware, wearable-device software, and edge-device data pipelines.
 - Career direction: **Embedded Software Engineer Intern**, **Firmware Engineer Intern**, **IoT Firmware Engineer**, **Sensor Firmware Engineer**, **Wearable Device Engineer**, and **Edge Device Software Engineer**.

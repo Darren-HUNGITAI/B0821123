@@ -118,6 +118,62 @@
           <article class="project-card project-card--featured" data-project>
             <div class="featured-project-head">
               <div class="project-top">
+                <p class="project-type">Embedded Sensing · CPR Research</p>
+                <h3>ESP32-S3 CPR 感測資料擷取</h3>
+                <p>
+                  為胸外按壓品質評估研究建立資料擷取原型，串接 A401 壓力感測器、MCP6002 類比前端與 ESP32-S3，透過 USB Serial 或 Wi-Fi UDP 傳送資料，並以 Python 保存 CSV 實驗紀錄。
+                </p>
+              </div>
+              <dl class="featured-project-meta">
+                <div>
+                  <dt>目前階段</dt>
+                  <dd>壓力訊號擷取與實驗紀錄</dd>
+                </div>
+                <div>
+                  <dt>取樣目標</dt>
+                  <dd>100 Hz（尚非實測保證）</dd>
+                </div>
+                <div>
+                  <dt>後續研究</dt>
+                  <dd>壓力與 IMU 同步擷取、感測融合及 TinyML</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="tag-row" aria-label="專案使用技術">
+              <span>ESP32-S3</span>
+              <span>Embedded C++</span>
+              <span>PlatformIO</span>
+              <span>Analog Sensing</span>
+              <span>USB Serial / Wi-Fi UDP</span>
+              <span>Python</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/Darren-HUNGITAI/ESP32-S3-Sensor-Data-Acquisition-for-CPR-Research"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <button
+              class="detail-button"
+              type="button"
+              data-expand
+              aria-controls="project-cpr-details"
+              aria-expanded="false"
+            >
+              展開細節
+            </button>
+            <ul class="project-detail" id="project-cpr-details" hidden>
+              <li>同時記錄壓力感測輸出、緩衝參考電壓及其差值，支援類比電路與壓力訊號觀察。</li>
+              <li>以共用 PressureSample 與 CSV 編碼器串接兩種傳輸方式，透過 PlatformIO 建置環境切換；Python 接收端驗證六欄格式並略過診斷訊息。</li>
+              <li>前期原型整合 ICM-20948、MQTT、Docker、SQLite 與 FastAPI / WebSocket 即時圖表；此管線與目前壓力 CSV 擷取分開運作。</li>
+              <li>目前訊號為未校正的壓力趨勢；同步感測融合、TinyML 推論與 CPR 品質效能評估為後續研究項目。</li>
+            </ul>
+          </article>
+
+          <article class="project-card project-card--featured" data-project>
+            <div class="featured-project-head">
+              <div class="project-top">
                 <p class="project-type">STP26 Seed Talent Program · Team Award</p>
                 <h3>Dyaco AI 跑姿矯正 APP</h3>
                 <p>
