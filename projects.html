@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-en="Projects | Darren Tai">專案 | 戴弘奕 Darren Tai</title>
+    <meta
+      name="description"
+      content="戴弘奕 Darren Tai 的代表專案：ESP32-S3 CPR 感測資料擷取、Dyaco AI 跑姿矯正 APP、LINE-MedBoardCoach、VideoMaestro、Aegis-Chain 與 CGU Android ChatApp。"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%2064%2064%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%23e8a317%22/%3E%3Ctext x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-size=%2226%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22%23121212%22%3EDT%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="projects">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="回到首頁">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <strong data-en="Darren Tai">戴弘奕 Darren Tai</strong>
+        <small>Embedded · Edge AI</small>
+      </a>
+
+      <div class="header-actions">
+        <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch to English">EN</button>
+        <button
+          class="menu-button"
+          type="button"
+          data-menu-toggle
+          aria-label="開啟導覽"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="nav" id="site-nav" data-nav aria-label="主要導覽">
+        <a href="resume.html" data-en="Resume">履歷</a>
+        <a href="projects.html" aria-current="page" data-en="Projects">專案</a>
+        <a href="contact.html" data-en="Contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="wrap page">
+      <h1 class="page-title reveal" data-en="Projects">專案</h1>
+
+      <article class="project reveal">
+        <div class="project-copy">
+          <p class="project-type">Embedded Sensing · CPR Research</p>
+          <h2 data-en="ESP32-S3 Sensor Data Acquisition for CPR Research">ESP32-S3 CPR 感測資料擷取</h2>
+          <p
+            data-en="A data-acquisition prototype for chest-compression quality research: an A401 pressure sensor and MCP6002 analog front end feed an ESP32-S3, which streams samples over USB Serial or Wi-Fi UDP while a Python receiver records CSV experiment logs."
+          >
+            為胸外按壓品質評估研究建立資料擷取原型，串接 A401 壓力感測器、MCP6002 類比前端與 ESP32-S3，透過 USB Serial 或 Wi-Fi UDP 傳送資料，並以 Python 保存 CSV 實驗紀錄。
+          </p>
+          <div class="tag-row" aria-label="專案使用技術">
+            <span>ESP32-S3</span>
+            <span>Embedded C++</span>
+            <span>PlatformIO</span>
+            <span>Analog Sensing</span>
+            <span>USB Serial / Wi-Fi UDP</span>
+            <span>Python</span>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Darren-HUNGITAI/ESP32-S3-Sensor-Data-Acquisition-for-CPR-Research"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-en="View on GitHub →"
+            >在 GitHub 查看 →</a
+          >
+        </div>
+        <div class="project-panel">
+          <span class="panel-dot panel-dot--yellow" aria-hidden="true"></span>
+          <dl class="panel-meta">
+            <div>
+              <dt data-en="Stage">目前階段</dt>
+              <dd data-en="Pressure signal acquisition and experiment logging">壓力訊號擷取與實驗紀錄</dd>
+            </div>
+            <div>
+              <dt data-en="Sampling">取樣目標</dt>
+              <dd data-en="100 Hz target (not yet verified)">100 Hz（尚非實測保證）</dd>
+            </div>
+            <div>
+              <dt data-en="Next">後續研究</dt>
+              <dd data-en="Synchronized pressure + IMU capture, sensor fusion and TinyML">
+                壓力與 IMU 同步擷取、感測融合及 TinyML
+              </dd>
+            </div>
+          </dl>
+          <ul class="panel-list">
+            <li data-en="Records the pressure output, buffered reference voltage and their difference for analog and signal observation.">
+              同時記錄壓力感測輸出、緩衝參考電壓及其差值，支援類比電路與壓力訊號觀察。
+            </li>
+            <li
+              data-en="A shared PressureSample type and CSV encoder drive both transports, switched by PlatformIO build environment; the Python receiver validates the six-column format and skips diagnostics."
+            >
+              以共用 PressureSample 與 CSV 編碼器串接兩種傳輸方式，透過 PlatformIO 建置環境切換；Python 接收端驗證六欄格式並略過診斷訊息。
+            </li>
+            <li data-en="An earlier prototype integrated ICM-20948, MQTT, Docker, SQLite and FastAPI / WebSocket live charts.">
+              前期原型整合 ICM-20948、MQTT、Docker、SQLite 與 FastAPI / WebSocket 即時圖表。
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-copy">
+          <p class="project-type" data-en="STP26 Seed Talent Program · Best Project Award, First Place (Team)">
+            STP26 Seed Talent Program · 最佳專案獎第一名（團隊）
+          </p>
+          <h2 data-en="Dyaco AI Running-Form App">Dyaco AI 跑姿矯正 APP</h2>
+          <p
+            data-en="Built with a team for Dyaco International: an AI fitness posture-correction assistant combining a Flutter app, running-form video analysis, educational AI feedback and cloud history trends. The team won the Best Project Award, First Place, at the STP26 final showcase."
+          >
+            與團隊為岱宇國際打造健身姿勢矯正 AI 助理系統，整合 Flutter App、跑姿影像分析、AI 教育性回饋與雲端歷史趨勢，團隊並於 STP26 結業成果發表獲最佳專案獎第一名。
+          </p>
+          <div class="tag-row" aria-label="專案使用技術">
+            <span>Flutter</span>
+            <span>FastAPI</span>
+            <span>MediaPipe</span>
+            <span>OpenCV</span>
+            <span>AWS RDS MySQL</span>
+          </div>
+        </div>
+        <div class="project-panel">
+          <span class="panel-dot panel-dot--red" aria-hidden="true"></span>
+          <dl class="panel-meta">
+            <div>
+              <dt data-en="Partner">合作企業</dt>
+              <dd data-en="Dyaco International Inc.">岱宇國際股份有限公司</dd>
+            </div>
+            <div>
+              <dt data-en="Period">執行期間</dt>
+              <dd>2026/03/21 – 2026/08/22</dd>
+            </div>
+            <div>
+              <dt data-en="Result">成果</dt>
+              <dd data-en="1st Place at the June World Café and 1st Place, Best Project Award, at the final showcase (team)">
+                6 月 World Café 第一名、結業成果發表最佳專案獎第一名（團隊）
+              </dd>
+            </div>
+          </dl>
+          <ul class="panel-list">
+            <li data-en="Supports live recording or video upload, with 10–30 s clips analyzed from side and rear views.">
+              支援即時錄影或影片上傳，並選取 10–30 秒片段進行側面與正後方跑姿分析。
+            </li>
+            <li
+              data-en="MediaPipe and OpenCV produce six core running-form metrics across side and rear views, such as vertical oscillation, cadence and knee flexion; the initial 11 were narrowed through research and testing."
+            >
+              以 MediaPipe 與 OpenCV 產生側面與後方視角的 6 項核心跑姿指標（如垂直振幅、步頻、膝關節屈曲度），由最初 11 項經研究與測試收斂而來。
+            </li>
+            <li data-en="Bilingual AI fitness assistant, educational form feedback, and AWS RDS MySQL history with trend charts.">
+              提供中英文 AI 運動客服、教育性跑姿回饋，以及 AWS RDS MySQL 歷史紀錄與趨勢圖。
+            </li>
+            <li data-en="Positioned as running-form analysis and sports education, not a medical diagnosis or injury-prediction tool.">
+              系統定位為跑姿分析與運動教育回饋，不作為醫療診斷或傷害預測工具。
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-copy">
+          <p class="project-type">AI Study Assistant</p>
+          <h2>LINE-MedBoardCoach</h2>
+          <p
+            data-en="A Flask LINE webhook connected to the CGU LLM that coaches medical board-exam review: AI Q&amp;A, conversation memory, question drawing, grading, SQLite answer history and weak-spot analysis."
+          >
+            使用 Flask LINE Webhook 串接 CGU LLM，打造醫師國考複習 Bot，支援 AI 問答、對話記憶、抽題、批改、SQLite 作答紀錄與弱點分析。
+          </p>
+          <div class="tag-row">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>LINE Bot</span>
+            <span>SQLite</span>
+            <span>LLM API</span>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Darren-HUNGITAI/LINE-MedBoardCoach"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-en="View on GitHub →"
+            >在 GitHub 查看 →</a
+          >
+        </div>
+        <div class="project-panel">
+          <span class="panel-dot panel-dot--cyan" aria-hidden="true"></span>
+          <ul class="panel-list">
+            <li data-en="Integrates the LINE Messaging API with an OpenAI-compatible CGU LLM for natural-language Q&amp;A and interactive review.">
+              整合 LINE Messaging API 與 OpenAI-compatible CGU LLM，提供自然語言問答與互動式複習流程。
+            </li>
+            <li data-en="Stores answer history in SQLite for score statistics and weak-spot analysis.">
+              以 SQLite 保存使用者作答歷史，支援成績統計與弱點分析。
+            </li>
+            <li data-en="Turns a Markdown question bank into a drawable, gradable, trackable LINE chat experience.">
+              將 Markdown 題庫轉成可抽題、可批改、可追蹤的 LINE 對話體驗。
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-copy">
+          <p class="project-type">Distributed Video System</p>
+          <h2>VideoMaestro</h2>
+          <p
+            data-en="A fault-tolerant distributed video-transcoding cluster with chunked upload, parallel transcoding, GPU NVENC acceleration, node monitoring and a Manager failover mode."
+          >
+            建置具容錯能力的分散式影片轉碼叢集，支援分段上傳、平行轉碼、GPU NVENC 加速、節點監控與 Manager Failover Mode。
+          </p>
+          <div class="tag-row">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Docker Compose</span>
+            <span>FFmpeg</span>
+            <span>NVENC</span>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Darren-HUNGITAI/CloudSystem_VideoMaestro"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-en="View on GitHub →"
+            >在 GitHub 查看 →</a
+          >
+        </div>
+        <div class="project-panel">
+          <span class="panel-dot panel-dot--yellow" aria-hidden="true"></span>
+          <ul class="panel-list">
+            <li data-en="Pull-based task queue dispatches transcoding jobs with FIFO ordering and configurable concurrency.">
+              以 Pull-based task queue 分派轉碼任務，支援 FIFO 佇列與可設定併發量。
+            </li>
+            <li data-en="Chunked upload, CPU / memory / GPU monitoring and three-stage progress tracking.">
+              整合 Chunked Upload、CPU / Memory / GPU 監控與三階段進度追蹤。
+            </li>
+            <li data-en="When workers go offline the Manager enters an emergency transcoding mode to reduce interruption.">
+              Worker 離線時由 Manager 進入緊急轉碼模式，降低分散式任務中斷風險。
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-copy">
+          <p class="project-type">Self-Healing P2P Ledger</p>
+          <h2>Aegis-Chain</h2>
+          <p
+            data-en="A self-healing P2P ledger built with Python, Flask, Docker and Tailscale: SHA-256 chained structure, heartbeat, dynamic majority voting and post-tamper repair."
+          >
+            使用 Python、Flask、Docker 與 Tailscale 實作自修復 P2P 帳本，包含 SHA-256 鏈式結構、Heartbeat、動態多數決與篡改後修復。
+          </p>
+          <div class="tag-row">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Docker</span>
+            <span>Tailscale</span>
+            <span>UDP</span>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Darren-HUNGITAI/CloudSystem_Aegis-Chain"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-en="View on GitHub →"
+            >在 GitHub 查看 →</a
+          >
+        </div>
+        <div class="project-panel">
+          <span class="panel-dot panel-dot--red" aria-hidden="true"></span>
+          <ul class="panel-list">
+            <li data-en="Implemented from scratch: file-based chained ledger, hash voting, transaction broadcast and liveness detection.">
+              從零實作 file-based chained ledger、Hash 投票、交易廣播與節點存活偵測。
+            </li>
+            <li data-en="Majority threshold is computed from live peers, avoiding consensus distortion from a fixed node count.">
+              依 live peers 動態計算多數決門檻，避免固定節點數造成的共識失真。
+            </li>
+            <li data-en="Network-wide freeze / unfreeze and a REQ_SYNC repair flow handle inconsistent state.">
+              設計 network-wide freeze / unfreeze 與 REQ_SYNC 修復流程，處理資料不一致情境。
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-copy">
+          <p class="project-type">Android Application</p>
+          <h2>CGU Android ChatApp</h2>
+          <p
+            data-en="A real-time chat app in Java with the Android SDK and Firebase: sign-up and login, instant messaging, recent conversations, online status, avatars and FCM push notifications."
+          >
+            使用 Java、Android SDK 與 Firebase 開發即時聊天 App，涵蓋登入註冊、即時訊息、最近對話、線上狀態、頭像與 FCM 推播。
+          </p>
+          <div class="tag-row">
+            <span>Java</span>
+            <span>Android SDK</span>
+            <span>Firestore</span>
+            <span>FCM</span>
+            <span>Retrofit</span>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Darren-HUNGITAI/CGU_Android_ChatApp"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-en="View on GitHub →"
+            >在 GitHub 查看 →</a
+          >
+        </div>
+        <div class="project-panel">
+          <span class="panel-dot panel-dot--cyan" aria-hidden="true"></span>
+          <ul class="panel-list">
+            <li data-en="Firebase Auth and Cloud Firestore handle accounts, user profiles and real-time message sync.">
+              以 Firebase Auth 與 Cloud Firestore 完成帳號、使用者資料與即時訊息同步。
+            </li>
+            <li data-en="Retrofit integrates FCM to push notifications when new messages arrive.">
+              使用 Retrofit 整合 FCM，於新訊息進入時推送通知。
+            </li>
+            <li data-en="RecyclerView adapters, ViewBinding and SharedPreferences complete the mobile interaction flow.">
+              透過 RecyclerView Adapter、ViewBinding 與 SharedPreferences 完成行動端互動流程。
+            </li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div>
+          <strong data-en="Phone">電話</strong>
+          <a href="tel:0919834777">0919-834-777</a>
+        </div>
+        <div>
+          <strong>Email</strong>
+          <a href="mailto:darren.tai0622@gmail.com">darren.tai0622@gmail.com</a>
+        </div>
+        <div>
+          <strong data-en="Follow Me">追蹤我</strong>
+          <span class="footer-links">
+            <a href="https://www.linkedin.com/in/darren-tai-hungi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Darren-HUNGITAI" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </span>
+        </div>
+        <p class="footer-copy" data-en="© 2026 Darren Tai">© 2026 戴弘奕 Darren Tai</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

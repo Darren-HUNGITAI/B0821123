@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>戴弘奕 Darren Tai | Embedded Edge AI Portfolio</title>
+    <title data-en="Darren Tai | Embedded Edge AI Portfolio">戴弘奕 Darren Tai | Embedded Edge AI Portfolio</title>
     <meta
       name="description"
       content="戴弘奕 Darren Tai 的個人網站，聚焦嵌入式軟體、邊緣 AI、感測器融合、TinyML，以及 Dyaco AI 跑姿矯正與雲端後端系統整合。"
@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://darren-hungitai.github.io/B0821123/" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%2064%2064%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230f766e%22/%3E%3Ctext x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-size=%2228%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22white%22%3EDT%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%2064%2064%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%23e8a317%22/%3E%3Ctext x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-size=%2226%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22%23121212%22%3EDT%3C/text%3E%3C/svg%3E"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_TW" />
@@ -23,30 +23,27 @@
     <meta property="og:url" content="https://darren-hungitai.github.io/B0821123/" />
     <meta
       property="og:image"
-      content="https://darren-hungitai.github.io/B0821123/assets/hero-tech.png"
+      content="https://darren-hungitai.github.io/B0821123/assets/profile-photo.jpg"
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="回到首頁">
-        <span class="brand-mark">DT</span>
-        <span class="brand-text">Darren Tai</span>
+      <a class="brand" href="index.html" aria-label="回到首頁">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <strong data-en="Darren Tai">戴弘奕 Darren Tai</strong>
+        <small>Embedded · Edge AI</small>
       </a>
 
-      <nav class="nav" id="site-nav" data-nav aria-label="主要導覽">
-        <a href="#about">摘要</a>
-        <a href="#projects">專案</a>
-        <a href="#experience">經歷</a>
-        <a href="#skills">技能</a>
-        <a href="#contact">聯絡</a>
-      </nav>
-
       <div class="header-actions">
-        <button class="icon-button" type="button" data-theme-toggle aria-label="切換深淺色">
-          <span class="sun-icon" aria-hidden="true"></span>
-        </button>
+        <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch to English">EN</button>
         <button
           class="menu-button"
           type="button"
@@ -60,488 +57,58 @@
           <span></span>
         </button>
       </div>
+
+      <nav class="nav" id="site-nav" data-nav aria-label="主要導覽">
+        <a href="resume.html" data-en="Resume">履歷</a>
+        <a href="projects.html" data-en="Projects">專案</a>
+        <a href="contact.html" data-en="Contact">聯絡</a>
+      </nav>
     </header>
 
-    <main id="top">
+    <main class="wrap">
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-bg" src="assets/hero-tech.png" alt="" />
-        <div class="hero-overlay"></div>
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">Embedded Software | Edge AI | Sensor Fusion</p>
-            <h1 id="hero-title">戴弘奕 Darren Tai</h1>
-            <p class="hero-lead">
-              長庚大學電機工程研究所碩士生，<br class="mobile-only" />專注 MCU 感測器融合、
-              TinyML、<br class="mobile-only" />即時韌體與後端系統整合。
-            </p>
-            <div class="hero-actions">
-              <a class="primary-action" href="#projects">查看專案</a>
-              <a class="secondary-action" href="#contact">聯絡我</a>
-            </div>
-          </div>
-
-          <aside class="profile-panel" aria-label="個人資訊摘要">
-            <div class="photo-slot">
-              <img src="assets/profile-photo.jpg" alt="戴弘奕大頭貼" />
-            </div>
-            <div class="quick-facts">
-              <p>電機工程碩士班在學</p>
-              <p>研究：MCU 壓力感測器融合與 TinyML</p>
-              <p>STP26 最佳專案獎第一名（團隊）</p>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section intro-section" id="about">
-        <div class="section-heading">
-          <span class="section-kicker">Profile</span>
-          <h2>個人摘要</h2>
-        </div>
-        <div class="intro-grid">
-          <p>
-            具備電機工程、嵌入式軟體、邊緣 AI 與後端系統整合背景，研究方向聚焦於基於 MCU 的多壓力感測器融合與 TinyML 胸外按壓品質即時評估系統，涵蓋即時訊號處理、邊緣模型部署與系統可靠性驗證。
-          </p>
-          <p>
-            曾參與 STP26 種子人才培訓計畫，與團隊為岱宇國際完成 Dyaco AI 跑姿矯正 APP，團隊並獲最佳專案獎第一名；其他作品橫跨 LINE AI Bot、分散式影片轉碼、P2P 自修復帳本與 Android 即時通訊。
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <span class="section-kicker">Selected Work</span>
-          <h2>代表專案</h2>
+        <div class="hero-photo reveal">
+          <img src="assets/profile-photo.jpg" alt="戴弘奕 Darren Tai 大頭貼" />
         </div>
 
-        <div class="project-grid">
-          <article class="project-card project-card--featured" data-project>
-            <div class="featured-project-head">
-              <div class="project-top">
-                <p class="project-type">Embedded Sensing · CPR Research</p>
-                <h3>ESP32-S3 CPR 感測資料擷取</h3>
-                <p>
-                  為胸外按壓品質評估研究建立資料擷取原型，串接 A401 壓力感測器、MCP6002 類比前端與 ESP32-S3，透過 USB Serial 或 Wi-Fi UDP 傳送資料，並以 Python 保存 CSV 實驗紀錄。
-                </p>
-              </div>
-              <dl class="featured-project-meta">
-                <div>
-                  <dt>目前階段</dt>
-                  <dd>壓力訊號擷取與實驗紀錄</dd>
-                </div>
-                <div>
-                  <dt>取樣目標</dt>
-                  <dd>100 Hz（尚非實測保證）</dd>
-                </div>
-                <div>
-                  <dt>後續研究</dt>
-                  <dd>壓力與 IMU 同步擷取、感測融合及 TinyML</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="tag-row" aria-label="專案使用技術">
-              <span>ESP32-S3</span>
-              <span>Embedded C++</span>
-              <span>PlatformIO</span>
-              <span>Analog Sensing</span>
-              <span>USB Serial / Wi-Fi UDP</span>
-              <span>Python</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/Darren-HUNGITAI/ESP32-S3-Sensor-Data-Acquisition-for-CPR-Research"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-            <button
-              class="detail-button"
-              type="button"
-              data-expand
-              aria-controls="project-cpr-details"
-              aria-expanded="false"
-            >
-              展開細節
-            </button>
-            <ul class="project-detail" id="project-cpr-details" hidden>
-              <li>同時記錄壓力感測輸出、緩衝參考電壓及其差值，支援類比電路與壓力訊號觀察。</li>
-              <li>以共用 PressureSample 與 CSV 編碼器串接兩種傳輸方式，透過 PlatformIO 建置環境切換；Python 接收端驗證六欄格式並略過診斷訊息。</li>
-              <li>前期原型整合 ICM-20948、MQTT、Docker、SQLite 與 FastAPI / WebSocket 即時圖表；此管線與目前壓力 CSV 擷取分開運作。</li>
-              <li>目前訊號為未校正的壓力趨勢；同步感測融合、TinyML 推論與 CPR 品質效能評估為後續研究項目。</li>
-            </ul>
-          </article>
-
-          <article class="project-card project-card--featured" data-project>
-            <div class="featured-project-head">
-              <div class="project-top">
-                <p class="project-type">STP26 Seed Talent Program · Team Award</p>
-                <h3>Dyaco AI 跑姿矯正 APP</h3>
-                <p>
-                  與團隊為岱宇國際打造健身姿勢矯正 AI 助理系統，整合 Flutter App、跑姿影像分析、AI 教育性回饋與雲端歷史趨勢，團隊並於 STP26 結業成果發表獲最佳專案獎第一名。
-                </p>
-              </div>
-              <dl class="featured-project-meta">
-                <div>
-                  <dt>培訓計畫</dt>
-                  <dd>STP26 種子人才培訓計畫</dd>
-                </div>
-                <div>
-                  <dt>合作企業</dt>
-                  <dd>岱宇國際股份有限公司</dd>
-                </div>
-                <div>
-                  <dt>企業專案</dt>
-                  <dd>健身姿勢矯正 AI 助理系統</dd>
-                </div>
-                <div>
-                  <dt>執行期間</dt>
-                  <dd>2026/03/21–2026/08/22</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="tag-row" aria-label="專案使用技術">
-              <span>Flutter</span>
-              <span>FastAPI</span>
-              <span>MediaPipe</span>
-              <span>OpenCV</span>
-              <span>AWS RDS MySQL</span>
-            </div>
-            <div class="award-badge" role="note" aria-label="團隊獲最佳專案獎第一名">
-              <strong>最佳專案獎 第一名</strong>
-              <span>團隊獲獎</span>
-            </div>
-            <button
-              class="detail-button"
-              type="button"
-              data-expand
-              aria-controls="project-dyaco-details"
-              aria-expanded="false"
-            >
-              展開細節
-            </button>
-            <ul class="project-detail" id="project-dyaco-details" hidden>
-              <li>支援即時錄影或影片上傳，並選取 10–30 秒片段進行側面與正後方跑姿分析。</li>
-              <li>以 MediaPipe 與 OpenCV 產生垂直振幅、步頻、膝關節屈曲度等 7 項跑姿指標。</li>
-              <li>提供中英文 AI 運動客服、教育性跑姿回饋，以及 AWS RDS MySQL 歷史紀錄與趨勢圖。</li>
-              <li>系統定位為跑姿分析與運動教育回饋，不作為醫療診斷或傷害預測工具。</li>
-            </ul>
-          </article>
-
-          <article class="project-card" data-project>
-            <div class="project-top">
-              <p class="project-type">AI Study Assistant</p>
-              <h3>LINE-MedBoardCoach</h3>
-              <p>
-                使用 Flask LINE Webhook 串接 CGU LLM，打造醫師國考複習 Bot，支援 AI 問答、對話記憶、抽題、批改、SQLite 作答紀錄與弱點分析。
-              </p>
-            </div>
-            <div class="tag-row">
-              <span>Python</span>
-              <span>Flask</span>
-              <span>LINE Bot</span>
-              <span>SQLite</span>
-              <span>LLM API</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/Darren-HUNGITAI/LINE-MedBoardCoach"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-            <button
-              class="detail-button"
-              type="button"
-              data-expand
-              aria-controls="project-medboard-details"
-              aria-expanded="false"
-            >
-              展開細節
-            </button>
-            <ul class="project-detail" id="project-medboard-details" hidden>
-              <li>整合 LINE Messaging API 與 OpenAI-compatible CGU LLM，提供自然語言問答與互動式複習流程。</li>
-              <li>以 SQLite 保存使用者作答歷史，支援成績統計與弱點分析。</li>
-              <li>將 Markdown 題庫轉成可抽題、可批改、可追蹤的 LINE 對話體驗。</li>
-            </ul>
-          </article>
-
-          <article class="project-card" data-project>
-            <div class="project-top">
-              <p class="project-type">Distributed Video System</p>
-              <h3>VideoMaestro</h3>
-              <p>
-                建置具容錯能力的分散式影片轉碼叢集，支援分段上傳、平行轉碼、GPU NVENC 加速、節點監控與 Manager Failover Mode。
-              </p>
-            </div>
-            <div class="tag-row">
-              <span>Python</span>
-              <span>Flask</span>
-              <span>Docker Compose</span>
-              <span>FFmpeg</span>
-              <span>NVENC</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/Darren-HUNGITAI/CloudSystem_VideoMaestro"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-            <button
-              class="detail-button"
-              type="button"
-              data-expand
-              aria-controls="project-video-details"
-              aria-expanded="false"
-            >
-              展開細節
-            </button>
-            <ul class="project-detail" id="project-video-details" hidden>
-              <li>以 Pull-based task queue 分派轉碼任務，支援 FIFO 佇列與可設定併發量。</li>
-              <li>整合 Chunked Upload、CPU / Memory / GPU 監控與三階段進度追蹤。</li>
-              <li>Worker 離線時由 Manager 進入緊急轉碼模式，降低分散式任務中斷風險。</li>
-            </ul>
-          </article>
-
-          <article class="project-card" data-project>
-            <div class="project-top">
-              <p class="project-type">Self-Healing P2P Ledger</p>
-              <h3>Aegis-Chain</h3>
-              <p>
-                使用 Python、Flask、Docker 與 Tailscale 實作自修復 P2P 帳本，包含 SHA-256 鏈式結構、Heartbeat、動態多數決與篡改後修復。
-              </p>
-            </div>
-            <div class="tag-row">
-              <span>Python</span>
-              <span>Flask</span>
-              <span>Docker</span>
-              <span>Tailscale</span>
-              <span>UDP</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/Darren-HUNGITAI/CloudSystem_Aegis-Chain"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-            <button
-              class="detail-button"
-              type="button"
-              data-expand
-              aria-controls="project-aegis-details"
-              aria-expanded="false"
-            >
-              展開細節
-            </button>
-            <ul class="project-detail" id="project-aegis-details" hidden>
-              <li>從零實作 file-based chained ledger、Hash 投票、交易廣播與節點存活偵測。</li>
-              <li>依 live peers 動態計算多數決門檻，避免固定節點數造成的共識失真。</li>
-              <li>設計 network-wide freeze / unfreeze 與 REQ_SYNC 修復流程，處理資料不一致情境。</li>
-            </ul>
-          </article>
-
-          <article class="project-card" data-project>
-            <div class="project-top">
-              <p class="project-type">Android Application</p>
-              <h3>CGU Android ChatApp</h3>
-              <p>
-                使用 Java、Android SDK 與 Firebase 開發即時聊天 App，涵蓋登入註冊、即時訊息、最近對話、線上狀態、頭像與 FCM 推播。
-              </p>
-            </div>
-            <div class="tag-row">
-              <span>Java</span>
-              <span>Android SDK</span>
-              <span>Firestore</span>
-              <span>FCM</span>
-              <span>Retrofit</span>
-            </div>
-            <a
-              class="project-link"
-              href="https://github.com/Darren-HUNGITAI/CGU_Android_ChatApp"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-            <button
-              class="detail-button"
-              type="button"
-              data-expand
-              aria-controls="project-chat-details"
-              aria-expanded="false"
-            >
-              展開細節
-            </button>
-            <ul class="project-detail" id="project-chat-details" hidden>
-              <li>以 Firebase Auth 與 Cloud Firestore 完成帳號、使用者資料與即時訊息同步。</li>
-              <li>使用 Retrofit 整合 FCM，於新訊息進入時推送通知。</li>
-              <li>透過 RecyclerView Adapter、ViewBinding 與 SharedPreferences 完成行動端互動流程。</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split-section" id="experience">
-        <div class="section-heading">
-          <span class="section-kicker">Background</span>
-          <h2>學歷與經歷</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-year">Now</span>
-            <div>
-              <h3>長庚大學 電機工程研究所</h3>
-              <p>碩士班在學中，研究基於 MCU 的多壓力感測器融合與 TinyML 胸外按壓品質即時評估系統。</p>
-            </div>
-          </article>
-          <article class="timeline-item timeline-item--highlight">
-            <span class="timeline-year">2026.03–08</span>
-            <div>
-              <h3>STP26 種子人才培訓計畫</h3>
-              <p class="experience-project">
-                <strong>合作企業</strong>
-                岱宇國際股份有限公司
-              </p>
-              <p class="experience-project">
-                <strong>企業專案</strong>
-                健身姿勢矯正 AI 助理系統 - Dyaco AI 跑姿矯正 APP
-              </p>
-              <p>
-                於 2026/03/21–2026/08/22 參與企業專案提案與執行，和團隊共同完成跑姿分析、AI 教育性回饋、行動 App 與雲端資料服務整合。
-              </p>
-              <div class="award-badge experience-award" role="note" aria-label="團隊獲最佳專案獎第一名">
-                <strong>最佳專案獎 第一名</strong>
-                <span>團隊獲獎</span>
-              </div>
-              <div class="tag-row experience-tags" aria-label="專案使用技術">
-                <span>Flutter</span>
-                <span>FastAPI</span>
-                <span>MediaPipe</span>
-                <span>OpenCV</span>
-                <span>AWS RDS MySQL</span>
-              </div>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-year">2026</span>
-            <div>
-              <h3>Micron MTB PWF MRDA - Summer Intern, Equipment Engineering</h3>
-              <p class="experience-project">
-                <strong>實習專題</strong>
-                TIQ (Tool Installation &amp; Qualification) Management and Data Visualization
-              </p>
-              <p>參與 TIQ 專案管理平台建置，負責設計資料處理架構與系統自動化流程。</p>
-              <div class="tag-row experience-tags" aria-label="實習使用工具">
-                <span>Microsoft Power Apps</span>
-                <span>Power Automate</span>
-                <span>Power BI</span>
-              </div>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-year">B.S.</span>
-            <div>
-              <h3>長庚大學 電機工程學系</h3>
-              <p>累積電機工程、嵌入式系統、程式設計與系統整合基礎。</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-year">Training</span>
-            <div>
-              <h3>國立台灣大學 電機資訊學院 資訊系統訓練班</h3>
-              <p>完成多執行緒與並行程式設計培訓，強化系統資源、任務排程與同步概念。</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="skills">
-        <div class="section-heading">
-          <span class="section-kicker">Capabilities</span>
-          <h2>技能與方向</h2>
-        </div>
-
-        <div class="skill-controls" role="group" aria-label="技能分類">
-          <button class="skill-filter is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
-          <button class="skill-filter" type="button" data-filter="firmware" aria-pressed="false">韌體</button>
-          <button class="skill-filter" type="button" data-filter="edge" aria-pressed="false">Edge AI</button>
-          <button class="skill-filter" type="button" data-filter="backend" aria-pressed="false">後端</button>
-          <button class="skill-filter" type="button" data-filter="mobile" aria-pressed="false">行動</button>
-        </div>
-
-        <div class="skills-list" data-skills>
-          <span data-category="firmware">Embedded Software</span>
-          <span data-category="firmware">Firmware</span>
-          <span data-category="firmware">MCU</span>
-          <span data-category="firmware">Sensor Fusion</span>
-          <span data-category="edge">TinyML</span>
-          <span data-category="edge">Edge Computing</span>
-          <span data-category="edge">Real-time Evaluation</span>
-          <span data-category="edge">MediaPipe</span>
-          <span data-category="edge">OpenCV</span>
-          <span data-category="backend">Python</span>
-          <span data-category="backend">Flask</span>
-          <span data-category="backend">FastAPI</span>
-          <span data-category="backend">REST API</span>
-          <span data-category="backend">MySQL</span>
-          <span data-category="backend">AWS</span>
-          <span data-category="backend">Docker</span>
-          <span data-category="backend">Distributed Systems</span>
-          <span data-category="backend">Heartbeat / Failover</span>
-          <span data-category="mobile">Java</span>
-          <span data-category="mobile">Flutter</span>
-          <span data-category="mobile">Android SDK</span>
-          <span data-category="mobile">Firebase</span>
-          <span data-category="mobile">FCM</span>
-        </div>
-
-        <div class="career-strip" aria-label="職涯方向">
-          <span>Embedded Software Engineer Intern</span>
-          <span>Firmware Engineer Intern</span>
-          <span>IoT Firmware Engineer</span>
-          <span>Sensor Firmware Engineer</span>
-          <span>Wearable Device Engineer</span>
-          <span>Edge Device Software Engineer</span>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="section-heading">
-          <span class="section-kicker">Contact</span>
-          <h2>聯絡資訊</h2>
-        </div>
-
-        <div class="contact-grid">
-          <a class="contact-link" href="tel:0919834777">
-            <span>電話</span>
-            <strong>0919-834-777</strong>
-          </a>
-          <a class="contact-link" href="mailto:darren.tai0622@gmail.com">
-            <span>Email</span>
-            <strong>darren.tai0622@gmail.com</strong>
-          </a>
-          <a
-            class="contact-link"
-            href="https://github.com/Darren-HUNGITAI"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div class="hero-copy reveal">
+          <h1 id="hero-title">Hello</h1>
+          <h2 class="hero-sub" data-en="A Bit About Me">關於我</h2>
+          <p
+            class="hero-text"
+            data-en="I'm Darren Tai, a master's student in Electrical Engineering at Chang Gung University, focused on embedded software, edge AI and sensor fusion. My current research is an MCU-based multi-pressure-sensor fusion system with TinyML for real-time chest-compression quality assessment. In 2026 I interned at Micron (Best Presentation Award) and led product research on Dyaco's AI running-form app with the STP26 team (two first-place finishes). I enjoy turning hardware signals, firmware, data flow and application layers into systems that actually work."
           >
-            <span>GitHub</span>
-            <strong>@Darren-HUNGITAI</strong>
-          </a>
-        </div>
+            我是戴弘奕，長庚大學電機工程研究所碩士生，專注在嵌入式軟體、Edge AI 與感測器融合。目前研究基於 MCU 的多壓力感測器融合與 TinyML 胸外按壓品質即時評估系統。2026 年於台灣美光實習並獲 Best Presentation Award，也與 STP26 團隊為岱宇國際打造 AI 跑姿 App，兩度拿下第一名。我喜歡把硬體訊號、韌體、資料流與應用層整合成真正可用的系統。
+          </p>
 
-        <div class="copy-row" aria-live="polite">
-          <button type="button" data-copy="0919-834-777">複製電話</button>
-          <button type="button" data-copy="darren.tai0622@gmail.com">複製 Email</button>
-          <span data-copy-status></span>
+          <div class="circle-row">
+            <a class="circle circle--yellow" href="resume.html" data-en="Resume">履歷</a>
+            <a class="circle circle--red" href="projects.html" data-en="Projects">專案</a>
+            <a class="circle circle--cyan" href="contact.html" data-en="Contact">聯絡</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>戴弘奕 Darren Tai | Embedded Edge AI Portfolio</p>
+      <div class="wrap footer-grid">
+        <div>
+          <strong data-en="Phone">電話</strong>
+          <a href="tel:0919834777">0919-834-777</a>
+        </div>
+        <div>
+          <strong>Email</strong>
+          <a href="mailto:darren.tai0622@gmail.com">darren.tai0622@gmail.com</a>
+        </div>
+        <div>
+          <strong data-en="Follow Me">追蹤我</strong>
+          <span class="footer-links">
+            <a href="https://www.linkedin.com/in/darren-tai-hungi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Darren-HUNGITAI" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </span>
+        </div>
+        <p class="footer-copy" data-en="© 2026 Darren Tai">© 2026 戴弘奕 Darren Tai</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
