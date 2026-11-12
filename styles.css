@@ -224,13 +224,11 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  filter: grayscale(1);
   transform: scale(1.02);
-  transition: filter 500ms ease, transform 700ms ease;
+  transition: transform 700ms ease;
 }
 
 .hero-photo:hover img {
-  filter: grayscale(0);
   transform: scale(1.06);
 }
 
