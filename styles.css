@@ -381,17 +381,47 @@ p {
   max-width: 68ch;
 }
 
+.entry-photo {
+  margin: 20px 0 0;
+  max-width: 640px;
+}
+
+.entry-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  background: var(--line);
+  transition: transform 500ms ease, box-shadow 500ms ease;
+}
+
+.entry-photo:hover img {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.entry-photo figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.award-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
 .award {
   display: inline-block;
-  margin-top: 14px;
   padding: 6px 14px;
   border-radius: 14px;
   background: var(--yellow);
-  color: var(--text) !important;
+  color: var(--surface);
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5;
-  max-width: none !important;
 }
 
 .skill-list {
@@ -679,6 +709,35 @@ p {
 
 /* ---------- Responsive ---------- */
 
+@media (max-width: 1200px) {
+  /* Narrow layouts: move the company logo under the date instead of a third column */
+  .entry--logo {
+    grid-template-columns: 150px minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  .entry--logo > time {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .entry--logo > div {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .entry-logo {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    justify-self: start;
+    width: 96px;
+    max-height: 32px;
+    object-position: left top;
+    margin-top: 6px;
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -762,13 +821,21 @@ p {
     gap: 4px;
   }
 
+  .entry--logo > time,
+  .entry--logo > div {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
   .entry-logo {
+    grid-column: auto;
+    grid-row: auto;
     order: -1;
     justify-self: start;
     width: 96px;
     max-height: 32px;
     object-position: left center;
-    margin-bottom: 6px;
+    margin: 0 0 6px;
   }
 
   .contact-circles {
